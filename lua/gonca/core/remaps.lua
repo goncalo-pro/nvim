@@ -11,7 +11,8 @@ km.set("n", "<leader>ru", vim.cmd.RunCode)
 
 km.set("n", "<leader>rp", ":w<CR>:!python main.py<CR>") 
 km.set("n", "<leader>rr", ":w<CR>:!cargo run<CR>")
-km.set("n", "<leader>rl", ":w<CR>:!lilypond main.ly<CR>:!.\\main.pdf<CR>")
+km.set("n", "<leader>rl", ":w<CR>:!latexmk -pdf main.tex<CR>:!.\\main.pdf<CR>")
+km.set("n", "<leader>rc", ":w<CR>:!gcc main.c<CR>:!.\\a.exe<CR>")
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
